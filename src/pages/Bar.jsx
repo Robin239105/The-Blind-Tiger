@@ -4,12 +4,12 @@ import { Tv, Beer, GlassWater, Trophy } from 'lucide-react';
 
 const Bar = () => {
   const cocktails = [
-    { name: 'Bayou Bloody Mary', desc: 'House-infused with Cajun trinity + Zing Zang. Shreveport\'s best.', price: '$10', badge: 'House Signature' },
-    { name: 'French Quarter Mule', desc: 'Moscow Mule with a Louisiana kick. Ginger, lime, house spice.', price: '$11' },
-    { name: 'Old Fashioned', desc: 'Bourbon, bitters, orange twist. Timeless.', price: '$12' },
-    { name: 'Bourbon Street Sling', desc: 'Bourbon, peach, lemon, ginger beer', price: '$12' },
-    { name: 'Swamp Water', desc: 'Midori, pineapple, coconut rum — tropical and dangerous', price: '$11' },
-    { name: 'Hurricane', desc: 'Dark and light rum, passion fruit, OJ, grenadine', price: '$13', badge: 'Strong' },
+    { name: 'Bayou Bloody Mary', desc: 'House-infused with Cajun trinity + Zing Zang. Shreveport\'s best.', price: '$10', badge: 'House Signature', img: 'https://images.unsplash.com/photo-1541546339599-ecdbfcf77378?auto=format&fit=crop&q=80&w=400' },
+    { name: 'French Quarter Mule', desc: 'Moscow Mule with a Louisiana kick. Ginger, lime, house spice.', price: '$11', img: 'https://images.unsplash.com/photo-1513415277900-a62401e19be4?auto=format&fit=crop&q=80&w=400' },
+    { name: 'Old Fashioned', desc: 'Bourbon, bitters, orange twist. Timeless.', price: '$12', img: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=400' },
+    { name: 'Bourbon Street Sling', desc: 'Bourbon, peach, lemon, ginger beer', price: '$12', img: 'https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&q=80&w=400' },
+    { name: 'Swamp Water', desc: 'Midori, pineapple, coconut rum — tropical and dangerous', price: '$11', img: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=400' },
+    { name: 'Hurricane', desc: 'Dark and light rum, passion fruit, OJ, grenadine', price: '$13', badge: 'Strong', img: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&q=80&w=400' },
   ];
 
   return (
@@ -56,19 +56,24 @@ const Bar = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {cocktails.map((drink, i) => (
               <motion.div 
-                key={i}
+                key={drink.name}
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 20 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-deep/50 p-8 border border-gold/10 hover:border-gold/30 transition-all group"
+                className="bg-deep/50 border border-gold/10 hover:border-gold/30 transition-all group overflow-hidden rounded-sm"
               >
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-playfair group-hover:text-gold transition-colors">{drink.name}</h3>
-                  <span className="text-gold font-josefin font-semibold">{drink.price}</span>
+                <div className="h-48 overflow-hidden">
+                  <img src={drink.img} alt={drink.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
-                {drink.badge && <span className="badge mb-4 inline-block">{drink.badge}</span>}
-                <p className="text-muted italic text-sm leading-relaxed">{drink.desc}</p>
+                <div className="p-8">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-2xl font-playfair group-hover:text-gold transition-colors">{drink.name}</h3>
+                    <span className="text-gold font-josefin font-semibold">{drink.price}</span>
+                  </div>
+                  {drink.badge && <span className="badge mb-4 inline-block">{drink.badge}</span>}
+                  <p className="text-muted italic text-sm leading-relaxed">{drink.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -155,8 +160,8 @@ const Bar = () => {
             <p className="text-white/90 font-josefin text-xl uppercase tracking-wider">Monday – Friday · 4:00 PM – 7:00 PM</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
-            {['$2 Off All Drafts', 'Half-Price Appetizers', 'Well Drinks $5'].map((pill, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-full text-white font-josefin uppercase tracking-widest text-xs font-semibold whitespace-nowrap">
+            {['$2 Off All Drafts', 'Half-Price Appetizers', 'Well Drinks $5'].map((pill) => (
+              <div key={pill} className="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-full text-white font-josefin uppercase tracking-widest text-xs font-semibold whitespace-nowrap">
                 {pill}
               </div>
             ))}
