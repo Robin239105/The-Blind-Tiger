@@ -79,12 +79,12 @@ const Contact = () => {
                 {[
                   { label: 'Dine-In', status: true },
                   { label: 'Takeout Available', status: true },
-                  { label: 'Online Ordering', status: true },
+                  { label: 'Online Ordering (Takeaway Only)', status: true },
+                  { label: 'Delivery Available', status: false },
                   { label: 'Reservations Required', status: false },
                   { label: 'Walk-ins Welcome', status: true },
                   { label: 'Wheelchair Accessible', status: true },
                   { label: 'Kids Menu Available', status: true },
-                  { label: 'Full Bar Selection', status: true },
                 ].map((item, i) => (
                   <div key={row.day} className="flex items-center gap-3">
                     {item.status ? <Check className="text-gold" size={16} /> : <X className="text-rust" size={16} />}

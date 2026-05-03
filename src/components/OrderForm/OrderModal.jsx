@@ -171,9 +171,9 @@ const OrderModal = ({ isOpen, onClose }) => {
                 className="flex flex-col items-center justify-center text-center py-12"
               >
                 <CheckCircle className="text-gold mb-6" size={64} />
-                <h3 className="text-2xl sm:text-3xl font-playfair mb-4">Order Received!</h3>
+                <h3 className="text-3xl font-playfair mb-4">Order Received!</h3>
                 <p className="text-muted font-josefin leading-relaxed max-w-sm">
-                  Thank you for choosing The Blind Tiger, {formData.name.split(' ')[0]}. Your Cajun favorites will be ready for pickup in 20 minutes.
+                  Thank you for choosing The Blind Tiger, {formData.name.split(' ')[0]}. Your order is being prepared for **Takeaway** and will be ready for pickup in 20 minutes.
                 </p>
                 <button 
                   onClick={onClose}
