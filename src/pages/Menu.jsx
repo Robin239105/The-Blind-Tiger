@@ -17,21 +17,21 @@ const Menu = () => {
     'Starters': [
       { name: 'Popcorn CrawTails', price: '$12', desc: 'Fried crawfish tails with Cajun tartar sauce', badge: "Chef's Pick", img: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=400' },
       { name: 'Bayou Crab Cakes', price: '$15', desc: 'Deep-fried Louisiana crab cakes', img: 'https://images.unsplash.com/photo-1534422298391-e4f8c170db76?auto=format&fit=crop&q=80&w=400' },
-      { name: 'Voodoo Shrimp', price: '$14', desc: '6 jumbo shrimp in secret house glaze', badge: 'Fan Fav', img: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=400' },
+      { name: 'Voodoo Shrimp', price: '$14', desc: '6 jumbo shrimp in secret house glaze', badge: 'Fan Fav', img: 'https://images.unsplash.com/photo-1532347922424-c652d9b7208e?auto=format&fit=crop&q=80&w=400' },
       { name: 'Fried Mushrooms', price: '$9', desc: 'Battered, fried, served with ranch', img: 'https://images.unsplash.com/photo-1626202133292-e86576d9bb5d?auto=format&fit=crop&q=80&w=400' },
-      { name: 'Cajun Corn', price: '$7', desc: 'Grilled corn with Cajun butter and seasoning', img: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&q=80&w=400' },
+      { name: 'Cajun Corn', price: '$7', desc: 'Grilled corn with Cajun butter and seasoning', img: 'https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&q=80&w=400' },
     ],
     'Seafood Mains': [
       { name: 'Blackened Catfish', price: '$18', desc: 'Cast iron seared, Cajun spice rub', badge: 'Signature', img: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=400' },
-      { name: 'Blackened Tilapia', price: '$17', desc: 'Light, flaky, boldly seasoned', img: 'https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?auto=format&fit=crop&q=80&w=400' },
-      { name: 'Crispy Fried Shrimp', price: '$16', desc: 'Basket of golden fried Gulf shrimp', img: 'https://images.unsplash.com/photo-1623961988350-6acd37533407?auto=format&fit=crop&q=80&w=400' },
-      { name: 'Blackened Shrimp Plate', price: '$18', desc: 'Blackened shrimp over dirty rice', img: 'https://images.unsplash.com/photo-1535400255456-9842f1473ee3?auto=format&fit=crop&q=80&w=400' },
-      { name: 'Pecan-Crusted Catfish', price: '$20', desc: 'Southern pecan crust, perfectly spiced', img: 'https://images.unsplash.com/photo-1551248429-40975aa4de74?auto=format&fit=crop&q=80&w=400' },
+      { name: 'Blackened Tilapia', price: '$17', desc: 'Light, flaky, boldly seasoned', img: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=400' },
+      { name: 'Crispy Fried Shrimp', price: '$16', desc: 'Basket of golden fried Gulf shrimp', img: 'https://images.unsplash.com/photo-1594911772125-07fc7a2d8d9f?auto=format&fit=crop&q=80&w=400' },
+      { name: 'Blackened Shrimp Plate', price: '$18', desc: 'Blackened shrimp over dirty rice', img: 'https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&q=80&w=400' },
+      { name: 'Pecan-Crusted Catfish', price: '$20', desc: 'Southern pecan crust, perfectly spiced', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=400' },
       { name: 'Seafood Sampler', price: '$24', desc: 'Generous mixed plate of house seafood', badge: 'New', img: 'https://images.unsplash.com/photo-1516714435131-44d6b64dc3a2?auto=format&fit=crop&q=80&w=400' },
     ],
     'Burgers': [
       { name: 'Tiger Burger', price: '$13', desc: 'House seasoned beef patty, lettuce, tomato, onion, pickles, Tiger sauce', img: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=400' },
-      { name: 'Blackened Chicken Burger', price: '$13', desc: 'Cajun blackened chicken breast on a brioche bun', img: 'https://images.unsplash.com/photo-1615239061327-1421e427e02e?auto=format&fit=crop&q=80&w=400' },
+      { name: 'Blackened Chicken Burger', price: '$13', desc: 'Cajun blackened chicken breast on a brioche bun', img: 'https://images.unsplash.com/photo-1525351326368-efbb5cb6814d?auto=format&fit=crop&q=80&w=400' },
     ],
     'Plates & Rice': [
       { name: 'Red Beans & Rice', price: '$12', desc: 'Louisiana classic with smoked sausage and cornbread', img: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&q=80&w=400' },
@@ -46,7 +46,7 @@ const Menu = () => {
       { name: 'Side Salad', price: '$5', desc: 'Fresh greens with choice of dressing', img: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=400' },
     ],
     'Kids': [
-      { name: 'Kids Catfish & Fries', price: '$8', desc: 'Smaller portion of our signature catfish', img: 'https://images.unsplash.com/photo-1533038590840-1cde6e668a91?auto=format&fit=crop&q=80&w=400' },
+      { name: 'Kids Catfish & Fries', price: '$8', desc: 'Smaller portion of our signature catfish', img: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&q=80&w=400' },
       { name: 'Kids Burger & Fries', price: '$8', desc: 'Classic burger for the little tigers', img: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=400' },
       { name: 'Kids Mac & Cheese', price: '$7', desc: 'Creamy and delicious', img: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&q=80&w=400' },
     ],
@@ -136,7 +136,7 @@ const Menu = () => {
           >
             {menuItems[activeTab].map((item) => (
               <div key={item.name} className="flex flex-col sm:flex-row gap-6 p-4 bg-deep/20 border border-gold/5 hover:border-gold/20 transition-all group rounded-sm">
-                <div className="w-full sm:w-32 h-32 shrink-0 overflow-hidden rounded-sm border border-gold/10">
+                <div className="w-full sm:w-32 h-32 shrink-0 overflow-hidden rounded-sm border border-gold/10 bg-warm/10">
                   <img src={item.img} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div className="flex flex-col flex-grow">

@@ -6,7 +6,7 @@ const Bar = () => {
   const cocktails = [
     { name: 'Bayou Bloody Mary', desc: 'House-infused with Cajun trinity + Zing Zang. Shreveport\'s best.', price: '$10', badge: 'House Signature', img: 'https://images.unsplash.com/photo-1541546339599-ecdbfcf77378?auto=format&fit=crop&q=80&w=400' },
     { name: 'French Quarter Mule', desc: 'Moscow Mule with a Louisiana kick. Ginger, lime, house spice.', price: '$11', img: 'https://images.unsplash.com/photo-1513415277900-a62401e19be4?auto=format&fit=crop&q=80&w=400' },
-    { name: 'Old Fashioned', desc: 'Bourbon, bitters, orange twist. Timeless.', price: '$12', img: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=400' },
+    { name: 'Old Fashioned', desc: 'Bourbon, bitters, orange twist. Timeless.', price: '$12', img: 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&q=80&w=400' },
     { name: 'Bourbon Street Sling', desc: 'Bourbon, peach, lemon, ginger beer', price: '$12', img: 'https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&q=80&w=400' },
     { name: 'Swamp Water', desc: 'Midori, pineapple, coconut rum — tropical and dangerous', price: '$11', img: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=400' },
     { name: 'Hurricane', desc: 'Dark and light rum, passion fruit, OJ, grenadine', price: '$13', badge: 'Strong', img: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&q=80&w=400' },
@@ -63,7 +63,7 @@ const Bar = () => {
                 transition={{ delay: i * 0.1 }}
                 className="bg-deep/50 border border-gold/10 hover:border-gold/30 transition-all group overflow-hidden rounded-sm"
               >
-                <div className="h-48 overflow-hidden">
+                <div className="h-48 overflow-hidden bg-warm/10">
                   <img src={drink.img} alt={drink.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div className="p-8">
