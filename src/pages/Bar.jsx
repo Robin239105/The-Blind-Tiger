@@ -27,11 +27,11 @@ const Bar = () => {
           alt="Bar Counter" 
           className="absolute inset-0 w-full h-full object-cover opacity-50"
         />
-        <div className="container mx-auto px-6 relative z-20 text-center">
+        <div className="container mx-auto px-4 md:px-6 relative z-20 text-center">
           <motion.h1 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            className="text-6xl md:text-8xl font-playfair mb-6"
+            className="text-4xl sm:text-6xl md:text-8xl font-playfair mb-6"
           >
             The Bar
           </motion.h1>
@@ -47,13 +47,13 @@ const Bar = () => {
       </section>
 
       {/* Signature Cocktails */}
-      <section className="py-24 px-6 bg-black">
+      <section className="py-16 px-4 md:py-24 md:px-6 bg-black">
         <div className="container mx-auto">
           <div className="mb-16">
             <h2 className="text-4xl font-playfair mb-4">Signature Cocktails</h2>
             <div className="w-20 h-1 bg-gold" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {cocktails.map((drink, i) => (
               <motion.div 
                 key={i}
@@ -76,8 +76,8 @@ const Bar = () => {
       </section>
 
       {/* Beer & Wine Grid */}
-      <section className="py-24 px-6 bg-deep border-y border-gold/5">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+      <section className="py-16 px-4 md:py-24 md:px-6 bg-deep border-y border-gold/5">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
           {/* Beer */}
           <div>
             <div className="flex items-center gap-4 mb-8">
@@ -147,11 +147,11 @@ const Bar = () => {
       </section>
 
       {/* Happy Hour Banner */}
-      <section className="bg-rust py-16 px-6">
+      <section className="bg-rust py-12 px-4 md:py-16 md:px-6">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
           <div className="text-center md:text-left">
             <span className="text-white/80 uppercase tracking-widest text-xs font-semibold font-josefin mb-4 block">Weekdays Only</span>
-            <h2 className="text-5xl font-playfair text-white mb-4">Happy Hour is calling.</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair text-white mb-4">Happy Hour is calling.</h2>
             <p className="text-white/90 font-josefin text-xl uppercase tracking-wider">Monday – Friday · 4:00 PM – 7:00 PM</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
@@ -165,12 +165,12 @@ const Bar = () => {
       </section>
 
       {/* Sports Bar Info */}
-      <section className="py-24 px-6 bg-black relative">
+      <section className="py-16 px-4 md:py-24 md:px-6 bg-black relative">
         <div className="container mx-auto text-center max-w-4xl">
           <div className="flex justify-center mb-8">
              <Tv className="text-gold" size={48} />
           </div>
-          <h2 className="text-5xl font-playfair mb-8 italic">Never Miss a Game</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair mb-8 italic">Never Miss a Game</h2>
           <p className="text-xl text-muted leading-relaxed font-josefin mb-16">
             With multiple high-definition screens throughout the bar area, The Blind Tiger is downtown Shreveport's home for sports. Whether it's NFL Sunday, NBA Playoffs, or the big fight, we've got you covered.
           </p>

@@ -10,15 +10,15 @@ const Contact = () => {
       exit={{ opacity: 0 }}
       className="bg-black min-h-screen"
     >
-      <div className="container mx-auto px-6 py-24">
-        <div className="flex flex-col md:flex-row gap-16">
+      <div className="container mx-auto px-4 md:px-6 py-16 md:py-24">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-16">
           
           {/* Left Panel: Info */}
           <div className="w-full md:w-1/2">
             <span className="text-gold uppercase tracking-[0.3em] font-josefin text-xs font-semibold mb-3 block">Find Us</span>
-            <h1 className="text-6xl font-playfair mb-12">Come On In</h1>
+            <h1 className="text-4xl sm:text-6xl font-playfair mb-12">Come On In</h1>
 
-            <div className="space-y-12">
+            <div className="space-y-8 md:space-y-12">
               {/* Address */}
               <div className="flex gap-6">
                 <div className="w-12 h-12 bg-deep border border-gold/20 flex items-center justify-center shrink-0">
@@ -96,7 +96,7 @@ const Contact = () => {
           </div>
 
           {/* Right Panel: Map */}
-          <div className="w-full md:w-1/2 h-[500px] md:h-auto min-h-[480px]">
+          <div className="w-full md:w-1/2 h-[350px] sm:h-[450px] md:h-auto">
              <div className="w-full h-full border border-gold/10 relative overflow-hidden group">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3374.8385317768564!2d-93.7508006!3d32.5135246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86312cd60f38c37d%3A0x6d987627a6948574!2s120%20Texas%20St%2C%20Shreveport%2C%20LA%2071101!5e0!3m2!1sen!2sus!4v1714700000000!5m2!1sen!2sus"

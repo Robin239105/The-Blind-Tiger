@@ -28,7 +28,7 @@ const Home = () => {
     >
       {/* Section 1: Hero */}
       <section className="min-h-screen flex flex-col md:flex-row items-center relative">
-        <div className="container mx-auto px-6 pt-24 md:pt-0 flex flex-col md:flex-row items-center">
+        <div className="container mx-auto px-4 md:px-6 pt-24 md:pt-0 flex flex-col md:flex-row items-center">
           <motion.div 
             variants={staggerContainer}
             initial="initial"
@@ -40,7 +40,7 @@ const Home = () => {
               <span className="text-gold uppercase tracking-[0.3em] font-josefin text-xs font-semibold">Cajun & Creole · Downtown Shreveport</span>
             </motion.div>
             
-            <motion.h1 variants={fadeInUp} className="text-6xl md:text-8xl font-playfair mb-8 leading-[1.1]">
+            <motion.h1 variants={fadeInUp} className="text-4xl sm:text-6xl md:text-8xl font-playfair mb-8 leading-[1.1]">
               Wild Flavors. <br />
               <span className="text-gold italic">Real Soul.</span>
             </motion.h1>
@@ -96,11 +96,11 @@ const Home = () => {
       <InfoStrip />
 
       {/* Section 3: Menu Highlights */}
-      <section className="py-24 px-6 bg-deep">
+      <section className="py-16 px-4 md:py-24 md:px-6 bg-deep">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <span className="text-gold uppercase tracking-widest text-xs font-semibold font-josefin mb-3 block">From the Kitchen</span>
-            <h2 className="text-5xl font-playfair">The Menu</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair">The Menu</h2>
           </div>
 
           <motion.div 
@@ -108,7 +108,7 @@ const Home = () => {
             initial="initial"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
           >
             {[
               { name: 'Popcorn CrawTails', price: '$12', badge: "Chef's Pick", desc: 'Fried to golden perfection, served with Cajun tartar sauce' },
@@ -140,8 +140,8 @@ const Home = () => {
       </section>
 
       {/* Section 4: About Teaser */}
-      <section className="py-24 px-6 bg-black relative">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="py-16 px-4 md:py-24 md:px-6 bg-black relative">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div className="relative h-[500px] w-full order-2 md:order-1 overflow-hidden border border-gold/10">
             <img 
               src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800" 
@@ -160,7 +160,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="order-1 md:order-2"
           >
-            <h2 className="text-5xl font-playfair mb-8">Four Decades of <br />Louisiana Soul</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair mb-8">Four Decades of <br />Louisiana Soul</h2>
             <p className="text-muted text-lg mb-8 leading-relaxed font-josefin font-light">
               Tucked into a historic saloon on Texas Street, The Blind Tiger has been Shreveport's home for authentic Cajun and Creole cooking since 1992. Every dish is cooked to order, every cocktail poured with intent.
             </p>
@@ -169,8 +169,8 @@ const Home = () => {
                 { label: '30+ Years Open', value: 'Since 1992' },
                 { label: '728 Yelp Reviews', value: 'Local Favorite' },
                 { label: '99 Health Score', value: 'Clean & Fresh' },
-              ].map((stat, i) => (
-                <div key={item.name} className="border-l-2 border-gold pl-6">
+              ].map((stat) => (
+                <div key={stat.label} className="border-l-2 border-gold pl-6">
                   <h4 className="font-playfair text-xl mb-1">{stat.label}</h4>
                   <span className="text-muted uppercase text-xs tracking-widest">{stat.value}</span>
                 </div>
@@ -182,20 +182,20 @@ const Home = () => {
       </section>
 
       {/* Section 5: Cocktail Spotlight */}
-      <section className="py-24 px-6 bg-deep">
+      <section className="py-16 px-4 md:py-24 md:px-6 bg-deep">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <span className="text-gold uppercase tracking-widest text-xs font-semibold font-josefin mb-3 block">From the Bar</span>
-            <h2 className="text-5xl font-playfair">Craft Cocktails</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair">Craft Cocktails</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {[
               { name: 'Bayou Bloody Mary', price: '$10', badge: 'House Signature', desc: "House-infused with the Cajun trinity (onion, celery, bell pepper) and Zing Zang mixer. Shreveport's best." },
               { name: 'French Quarter Mule', price: '$11', badge: null, desc: "NOLA twist on the Moscow Mule. Ginger, lime, Louisiana heat." },
               { name: 'Old Fashioned', price: '$12', badge: null, desc: "Bourbon, bitters, and a twist. Simple. Perfect." },
-            ].map((drink, i) => (
-              <div key={item.name} className="bg-black/40 p-10 border border-gold/10 hover:border-gold/30 transition-all flex flex-col h-full">
+            ].map((drink) => (
+              <div key={drink.name} className="bg-black/40 p-10 border border-gold/10 hover:border-gold/30 transition-all flex flex-col h-full">
                 <div className="flex justify-between items-start mb-6">
                   <h3 className="text-2xl font-playfair group-hover:text-gold transition-colors">{drink.name}</h3>
                   <span className="text-gold font-josefin font-semibold">{drink.price}</span>
@@ -216,12 +216,12 @@ const Home = () => {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
           <div className="text-center md:text-left">
             <span className="text-white/80 uppercase tracking-widest text-xs font-semibold font-josefin mb-4 block">Weekdays Only</span>
-            <h2 className="text-5xl font-playfair text-white mb-4">Happy Hour is calling.</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair text-white mb-4">Happy Hour is calling.</h2>
             <p className="text-white/90 font-josefin text-xl uppercase tracking-wider">Monday – Friday · 4:00 PM – 7:00 PM</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
-            {['$2 Off All Drafts', 'Half-Price Appetizers', 'Well Drinks $5'].map((pill, i) => (
-              <div key={item.name} className="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-full text-white font-josefin uppercase tracking-widest text-xs font-semibold whitespace-nowrap">
+            {['$2 Off All Drafts', 'Half-Price Appetizers', 'Well Drinks $5'].map((pill) => (
+              <div key={pill} className="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-full text-white font-josefin uppercase tracking-widest text-xs font-semibold whitespace-nowrap">
                 {pill}
               </div>
             ))}
@@ -230,22 +230,22 @@ const Home = () => {
       </section>
 
       {/* Section 7: Reviews */}
-      <section className="py-24 px-6 bg-black">
+      <section className="py-16 px-4 md:py-24 md:px-6 bg-black">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <span className="text-gold uppercase tracking-widest text-xs font-semibold font-josefin mb-3 block">Testimonials</span>
-            <h2 className="text-5xl font-playfair">Real Reviews</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair">Real Reviews</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
             {[
               { text: "The crab cakes were amazing. My entree was the red beans and rice — the cornbread was delicious and the sausage had great flavor. Easy recommendation.", source: "Yelp" },
               { text: "Authentic Cajun food, I like it sooo much. Reminds me of my hometown. Good pork with pepper, spicy, smells great.", source: "Google" },
               { text: "I tried the Cajun sampler and loved it. First time in Shreveport and wanted authentic food. The Blind Tiger was an excellent choice.", source: "TripAdvisor" },
-            ].map((review, i) => (
-              <div key={item.name} className="flex flex-col items-center text-center">
+            ].map((review) => (
+              <div key={review.source} className="flex flex-col items-center text-center">
                 <div className="flex gap-1 mb-6">
-                  {[...Array(5)].map((_, i) => <Star key={item.name} size={16} fill="#c9a84c" color="#c9a84c" />)}
+                  {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="#c9a84c" color="#c9a84c" />)}
                 </div>
                 <blockquote className="text-cream italic font-playfair text-lg leading-relaxed mb-6">
                   "{review.text}"

@@ -33,11 +33,11 @@ const Navbar = () => {
       <nav 
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b ${
           isScrolled 
-            ? 'bg-black/90 backdrop-blur-md border-gold/25 py-3' 
+            ? 'bg-black/90 backdrop-blur-md border-gold/25 py-2.5' 
             : 'bg-black border-gold/10 py-5'
         }`}
       >
-        <div className="container mx-auto px-6 flex justify-between items-center">
+        <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-4 group">
             <div className="w-12 h-12 border-2 border-gold rounded-full flex items-center justify-center group-hover:bg-gold transition-colors duration-300 overflow-hidden bg-white/5 p-1">
@@ -93,14 +93,14 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="absolute top-full left-0 w-full bg-deep border-b border-gold/20 flex flex-col p-6 gap-6 md:hidden"
+              className="absolute top-full left-0 w-full bg-deep border-b border-gold/20 flex flex-col p-4 gap-4 md:hidden"
             >
               {navLinks.map((link) => (
                 <Link 
                   key={link.name} 
                   to={link.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`nav-link text-lg ${isActive(link.path) ? 'text-gold' : ''}`}
+                  className={`nav-link text-base ${isActive(link.path) ? 'text-gold' : ''}`}
                 >
                   {link.name}
                 </Link>
@@ -110,7 +110,7 @@ const Navbar = () => {
                   setIsMobileMenuOpen(false);
                   setIsOrderModalOpen(true);
                 }}
-                className="btn-gold text-center py-3"
+                className="btn-gold text-center py-2.5"
               >
                 Order Online
               </button>

@@ -22,11 +22,11 @@ const Events = () => {
               className="absolute inset-0 w-full h-full object-cover opacity-40"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black z-10" />
-            <div className="container mx-auto px-6 relative z-10 text-center">
+            <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
               <motion.h1 
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                className="text-6xl md:text-8xl font-playfair mb-4"
+                className="text-4xl sm:text-6xl md:text-8xl font-playfair mb-4"
               >
                 Events & Sports
               </motion.h1>
@@ -42,12 +42,12 @@ const Events = () => {
           </motion.div>
 
       {/* Sports Viewing */}
-      <section className="py-24 px-6 bg-deep">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="py-16 px-4 md:py-24 md:px-6 bg-deep">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div>
             <div className="flex items-center gap-4 mb-8">
               <Trophy className="text-gold" size={32} />
-              <h2 className="text-4xl font-playfair">Sports Viewing</h2>
+              <h2 className="text-3xl sm:text-4xl font-playfair">Sports Viewing</h2>
             </div>
             <p className="text-muted text-lg leading-relaxed font-josefin mb-10">
               We keep every major sport live on our screens — NFL, NBA, MLB, college football, and more. Walk in on game day, grab a cold one, and cheer loud.
@@ -78,14 +78,14 @@ const Events = () => {
       </section>
 
       {/* Weekly Specials */}
-      <section className="py-24 px-6 bg-black">
+      <section className="py-16 px-4 md:py-24 md:px-6 bg-black">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-playfair mb-4">Weekly Specials</h2>
+            <h2 className="text-3xl sm:text-4xl font-playfair mb-4">Weekly Specials</h2>
             <div className="w-20 h-1 bg-gold mx-auto" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {[
               { day: 'Monday', title: 'Red Beans & Rice', detail: 'A true Louisiana tradition. Plus our daily Happy Hour specials.', icon: <Calendar /> },
               { day: 'Tuesday – Friday', title: 'Happy Hour 4–7pm', detail: 'The best deal in downtown. Specials on drafts, well drinks, and appetizers.', icon: <Calendar /> },
@@ -107,9 +107,9 @@ const Events = () => {
       </section>
 
       {/* Private Events */}
-      <section className="py-24 px-6 bg-rust">
+      <section className="py-16 px-4 md:py-24 md:px-6 bg-rust">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-5xl font-playfair text-white mb-8 leading-tight">Host Your Event at <br />The Blind Tiger</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair text-white mb-8 leading-tight">Host Your Event at <br />The Blind Tiger</h2>
           <p className="text-white/90 text-lg font-josefin mb-12 leading-relaxed">
             Birthdays, work parties, game day groups — we accommodate groups of all sizes. Call us directly to discuss your event and customized catering options.
           </p>

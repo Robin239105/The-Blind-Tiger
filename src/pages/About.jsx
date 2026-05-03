@@ -13,11 +13,11 @@ const About = () => {
       {/* Hero */}
       <section className="h-[40vh] relative flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 diagonal-texture opacity-20" />
-        <div className="container mx-auto px-6 relative z-10 text-center">
+        <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <motion.h1 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            className="text-6xl md:text-8xl font-playfair mb-4"
+            className="text-4xl sm:text-6xl md:text-8xl font-playfair mb-4"
           >
             Our Story
           </motion.h1>
@@ -26,8 +26,8 @@ const About = () => {
       </section>
 
       {/* History */}
-      <section className="py-24 px-6">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="py-16 px-4 md:py-24 md:px-6">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div className="relative h-[600px] w-full overflow-hidden border border-gold/10">
             <img 
               src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800" 
@@ -40,7 +40,7 @@ const About = () => {
             </div>
           </div>
           <div>
-            <h2 className="text-5xl font-playfair mb-10 leading-tight">Born on Texas Street, <br /><span className="text-gold italic">1992</span></h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair mb-10 leading-tight">Born on Texas Street, <br /><span className="text-gold italic">1992</span></h2>
             <div className="space-y-6 text-muted font-josefin text-lg leading-relaxed">
               <p>
                 The Blind Tiger opened its doors in 1992 in the heart of downtown Shreveport, Louisiana — right on historic Texas Street. What started as a neighborhood saloon has grown into one of the city's most beloved dining and drinking institutions.
@@ -57,14 +57,14 @@ const About = () => {
       </section>
 
       {/* What We're Known For */}
-      <section className="py-24 px-6 bg-deep">
+      <section className="py-16 px-4 md:py-24 md:px-6 bg-deep">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-playfair mb-4">What We're Known For</h2>
             <div className="w-20 h-1 bg-gold mx-auto" />
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { icon: <Anchor />, title: 'Blackened Seafood', desc: 'Our signature technique, seared hot on cast iron with our house Cajun rub' },
               { icon: <Zap />, title: 'Craft Cocktails', desc: 'From the famous Bayou Bloody Mary to the French Quarter Mule' },
@@ -82,7 +82,7 @@ const About = () => {
       </section>
 
       {/* Stats Row */}
-      <section className="bg-black py-20 px-6 border-y border-gold/10">
+      <section className="bg-black py-12 px-4 md:py-20 md:px-6 border-y border-gold/10">
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
             {[
@@ -92,7 +92,7 @@ const About = () => {
               { label: 'Guests Welcomed', value: '47k+' },
             ].map((stat, i) => (
               <div key={i}>
-                <div className="text-gold text-5xl font-playfair mb-2">{stat.value}</div>
+                <div className="text-gold text-3xl sm:text-4xl md:text-5xl font-playfair mb-2">{stat.value}</div>
                 <div className="text-muted text-[10px] uppercase tracking-[0.3em] font-bold font-josefin">{stat.label}</div>
               </div>
             ))}
@@ -101,7 +101,7 @@ const About = () => {
       </section>
 
       {/* Press Quote */}
-      <section className="py-24 px-6 bg-texture bg-fixed">
+      <section className="py-16 px-4 md:py-24 md:px-6 bg-texture bg-fixed">
         <div className="container mx-auto max-w-4xl text-center">
           <blockquote className="font-playfair text-3xl md:text-5xl italic leading-tight text-cream/90 mb-10">
             "Authentic Cajun food, I liked it sooo much. Reminds me of the taste of my hometown food."

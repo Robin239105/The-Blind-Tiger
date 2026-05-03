@@ -40,7 +40,7 @@ const OrderModal = ({ isOpen, onClose }) => {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6">
+      <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-4 md:p-3 sm:p-4 sm:p-6">
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -56,9 +56,9 @@ const OrderModal = ({ isOpen, onClose }) => {
           className="relative bg-deep border border-gold/20 w-full max-w-2xl overflow-hidden rounded-sm"
         >
           {/* Header */}
-          <div className="p-6 border-b border-gold/10 flex justify-between items-center bg-black/40">
+          <div className="p-3 sm:p-4 sm:p-6 border-b border-gold/10 flex justify-between items-center bg-black/40">
             <div>
-              <h2 className="text-2xl font-playfair text-gold">Order Online</h2>
+              <h2 className="text-xl sm:text-2xl font-playfair text-gold">Order Online</h2>
               <p className="text-[10px] text-muted uppercase tracking-widest font-josefin">Step {step} of 4</p>
             </div>
             <button onClick={onClose} className="text-muted hover:text-gold transition-colors">
@@ -76,19 +76,19 @@ const OrderModal = ({ isOpen, onClose }) => {
           </div>
 
           {/* Content */}
-          <div className="p-8 min-h-[400px]">
+          <div className="p-3 sm:p-4 sm:p-8 min-h-[300px] sm:min-h-[400px] max-h-[60vh] overflow-y-auto">
             {step === 1 && (
               <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
                 <div className="flex items-center gap-3 mb-6">
                   <ShoppingBag className="text-gold" size={20} />
-                  <h3 className="text-xl font-playfair">Select Your Favorites</h3>
+                  <h3 className="text-lg sm:text-xl font-playfair">Select Your Favorites</h3>
                 </div>
                 <div className="space-y-3">
                   {menuItems.map(item => (
                     <div 
                       key={item.id}
                       onClick={() => toggleItem(item)}
-                      className={`p-4 border transition-all cursor-pointer flex justify-between items-center ${
+                      className={`p-3 sm:p-4 border transition-all cursor-pointer flex justify-between items-center ${
                         formData.items.find(i => i.id === item.id) 
                           ? 'border-gold bg-gold/5' 
                           : 'border-gold/10 hover:border-gold/30 bg-black/20'
@@ -106,22 +106,22 @@ const OrderModal = ({ isOpen, onClose }) => {
               <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
                 <div className="flex items-center gap-3 mb-6">
                   <User className="text-gold" size={20} />
-                  <h3 className="text-xl font-playfair">Your Details</h3>
+                  <h3 className="text-lg sm:text-xl font-playfair">Your Details</h3>
                 </div>
                 <div className="space-y-4">
                   <input 
                     type="text" placeholder="Full Name" 
-                    className="w-full bg-black/40 border border-gold/20 p-4 font-josefin focus:outline-none focus:border-gold text-cream"
+                    className="w-full bg-black/40 border border-gold/20 p-3 sm:p-4 font-josefin focus:outline-none focus:border-gold text-cream"
                     value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})}
                   />
                   <input 
                     type="email" placeholder="Email Address" 
-                    className="w-full bg-black/40 border border-gold/20 p-4 font-josefin focus:outline-none focus:border-gold text-cream"
+                    className="w-full bg-black/40 border border-gold/20 p-3 sm:p-4 font-josefin focus:outline-none focus:border-gold text-cream"
                     value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})}
                   />
                   <input 
                     type="tel" placeholder="Phone Number" 
-                    className="w-full bg-black/40 border border-gold/20 p-4 font-josefin focus:outline-none focus:border-gold text-cream"
+                    className="w-full bg-black/40 border border-gold/20 p-3 sm:p-4 font-josefin focus:outline-none focus:border-gold text-cream"
                     value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})}
                   />
                 </div>
@@ -132,9 +132,9 @@ const OrderModal = ({ isOpen, onClose }) => {
               <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
                 <div className="flex items-center gap-3 mb-6">
                   <CreditCard className="text-gold" size={20} />
-                  <h3 className="text-xl font-playfair">Review & Payment</h3>
+                  <h3 className="text-lg sm:text-xl font-playfair">Review & Payment</h3>
                 </div>
-                <div className="bg-black/40 p-6 border border-gold/10 mb-6">
+                <div className="bg-black/40 p-3 sm:p-4 sm:p-6 border border-gold/10 mb-6">
                   <h4 className="text-xs text-gold uppercase tracking-[0.2em] mb-4">Your Order</h4>
                   {formData.items.map(item => (
                     <div key={item.id} className="flex justify-between text-sm mb-2 font-josefin italic">
@@ -147,16 +147,16 @@ const OrderModal = ({ isOpen, onClose }) => {
                     <span>${total}</span>
                   </div>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-3 sm:p-4">
                   <button 
                     onClick={() => setFormData({...formData, paymentMethod: 'card'})}
-                    className={`flex-1 p-4 border font-josefin uppercase tracking-widest text-xs ${formData.paymentMethod === 'card' ? 'border-gold bg-gold/10' : 'border-gold/10'}`}
+                    className={`flex-1 p-3 sm:p-4 border font-josefin uppercase tracking-widest text-xs ${formData.paymentMethod === 'card' ? 'border-gold bg-gold/10' : 'border-gold/10'}`}
                   >
                     Credit Card
                   </button>
                   <button 
                     onClick={() => setFormData({...formData, paymentMethod: 'cash'})}
-                    className={`flex-1 p-4 border font-josefin uppercase tracking-widest text-xs ${formData.paymentMethod === 'cash' ? 'border-gold bg-gold/10' : 'border-gold/10'}`}
+                    className={`flex-1 p-3 sm:p-4 border font-josefin uppercase tracking-widest text-xs ${formData.paymentMethod === 'cash' ? 'border-gold bg-gold/10' : 'border-gold/10'}`}
                   >
                     Pay at Pickup
                   </button>
@@ -171,7 +171,7 @@ const OrderModal = ({ isOpen, onClose }) => {
                 className="flex flex-col items-center justify-center text-center py-12"
               >
                 <CheckCircle className="text-gold mb-6" size={64} />
-                <h3 className="text-3xl font-playfair mb-4">Order Received!</h3>
+                <h3 className="text-2xl sm:text-3xl font-playfair mb-4">Order Received!</h3>
                 <p className="text-muted font-josefin leading-relaxed max-w-sm">
                   Thank you for choosing The Blind Tiger, {formData.name.split(' ')[0]}. Your Cajun favorites will be ready for pickup in 20 minutes.
                 </p>
@@ -187,7 +187,7 @@ const OrderModal = ({ isOpen, onClose }) => {
 
           {/* Footer Navigation */}
           {step < 4 && (
-            <div className="p-6 border-t border-gold/10 bg-black/40 flex justify-between">
+            <div className="p-3 sm:p-4 sm:p-6 border-t border-gold/10 bg-black/40 flex justify-between">
               <button 
                 onClick={prevStep}
                 disabled={step === 1}
